@@ -27,7 +27,10 @@ CSRF_TRUSTED_ORIGINS = [
 STATIC_DIR = BASE_DIR / "static"
 STATIC_ROOT = BASE_DIR / ".static"
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [STATIC_DIR]
+STATICFILES_DIRS = [
+    STATIC_DIR,
+    BASE_DIR.parent / "django_quill" / "static",
+]
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / ".media"
 
@@ -39,7 +42,15 @@ QUILL_CONFIGS = {
             "syntax": True,
             "toolbar": [
                 [
-                    {"font": []},
+                    {"font": [
+                            "sans-serif",      # Quill default
+                            "serif",           # Quill default
+                            "monospace",       # Quill default
+                            "arial",
+                            "times-new-roman",
+                            "courier-new",
+                            "verdana"
+                        ]},
                     {"header": []},
                     {"align": []},
                     "bold",

@@ -20,3 +20,6 @@ class QuillPostForm(forms.ModelForm):
     class Meta:
         model = QuillPost
         fields = ("content",)
+
+
+

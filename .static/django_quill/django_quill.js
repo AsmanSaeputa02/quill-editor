@@ -1,17 +1,11 @@
 var Font = Quill.import('formats/font');
 Font.whitelist = [
-    'sans-serif',
-    'serif',
-    'monospace',
-    'arial',
-    'times-new-roman',
-    'courier-new',
-    'verdana'
+    'sans-serif','serif','monospace','arial','times-new-roman','courier-new','verdana'
 ];
 Quill.register(Font, true);
 
-
 const djq = {}
+
 class QuillWrapper {
     constructor(targetDivId, targetInputId, quillOptions) {
         if (!Quill.imports["modules/resize"] && quillOptions["modules"].resize) {

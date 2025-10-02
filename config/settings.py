@@ -4,10 +4,15 @@ Django settings for django-quill-editor-playground project.
 
 import os
 from pathlib import Path
+import sys
 
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+sys.path.insert(0, str(BASE_DIR.parent)) 
+
 
 SECRET_KEY = "er8-=^6ym+!t&r#4-=3cq3!25%3hw=9n+5bp1i2549ltqfg=xp"
 DEBUG = True
